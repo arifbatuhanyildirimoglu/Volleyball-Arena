@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviourPunCallbacks
 {
     private float speed = 2f;
 
-    private float jumpForce = 5f;
+    private float jumpForce = 400f;
 
     private bool isGrounded;
     // Start is called before the first frame update
@@ -23,6 +23,12 @@ public class PlayerScript : MonoBehaviourPunCallbacks
         if (other.collider.name.Equals("Ground"))
             isGrounded = true;
 
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.collider.name.Equals("Ground"))
+            isGrounded = false;
     }
 
     // Update is called once per frame

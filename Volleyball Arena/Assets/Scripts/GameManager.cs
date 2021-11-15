@@ -39,9 +39,9 @@ public class GameManager : MonoBehaviour
         {
             
             ball = PhotonNetwork.Instantiate(ballPrefab.name, ballSpawnPosition.transform.position, Quaternion.identity);
-
+        
             int randomNumber = Random.Range(0, 2);
-
+        
             if (randomNumber == 0)
                 ball.GetComponent<Rigidbody>().AddForce(Vector3.left * 2f, ForceMode.Impulse);
             else

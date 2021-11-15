@@ -8,8 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
-    public GameObject gameScenecanvas;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +16,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
         if (!PhotonNetwork.IsConnected)
             PhotonNetwork.ConnectUsingSettings();
+
     }
 
     public void OnCreateRoomButtonClicked()
@@ -33,18 +33,11 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
+
             if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
             {
                 PhotonNetwork.LoadLevel("GameScene");
-                gameScenecanvas.SetActive(false);
-                Time.timeScale = 1;
             }
-            //else if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
-            //{
-            //    PhotonNetwork.LoadLevel("GameScene");
-            //    gameScenecanvas.SetActive(true);
-            //    Time.timeScale = 0;
-            //}
         }
     }
 
