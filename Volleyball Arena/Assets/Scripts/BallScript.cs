@@ -19,19 +19,25 @@ public class BallScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.collider.name.Equals("Ground"))
+        if (PhotonNetwork.IsMasterClient)
         {
-            if (transform.position.x < 0)
+            
+            if (other.collider.name.Equals("Ground"))
             {
-                //TODO: CLIENT SCORE ALIR
-                ScoreManager.Instance.AddScoreToClient();
+                if (transform.position.x < 0)
+                {
+                    //TODO: CLIENT SCORE ALIR
+                    ScoreManager.Instance.AddScoreToClient();
+                }
+                else
+                {
+                    //TODO: MASTER CLIENT SCORE ALIR
+                    ScoreManager.Instance.AddScoreToMaster();
+                }
             }
-            else
-            {
-                //TODO: MASTER CLIENT SCORE ALIR
-                ScoreManager.Instance.AddScoreToMaster();
-            }
+            
         }
+        
     }
 
     // Update is called once per frame

@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - LobbyManager
     - PlayerScript
     - ScoreManager
+    - UIManager
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -38,6 +39,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
@@ -76,9 +78,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1434}
     - Class: 114
+      Script: {instanceID: 1436}
+    - Class: 114
       Script: {instanceID: 1712}
     - Class: 114
       Script: {instanceID: 2552}
+    - Class: 114
+      Script: {instanceID: 2578}
     - Class: 114
       Script: {instanceID: 2612}
     - Class: 114
@@ -97,6 +103,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3792}
     - Class: 114
       Script: {instanceID: 3896}
+    - Class: 114
+      Script: {instanceID: 3920}
+    - Class: 114
+      Script: {instanceID: 19524}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -110,6 +120,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -1579,6 +1591,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
+  - hash:
+      serializedVersion: 2
+      Hash: 4a8be2582d114713ba94b188aff71605
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/LobbyScene.unity
