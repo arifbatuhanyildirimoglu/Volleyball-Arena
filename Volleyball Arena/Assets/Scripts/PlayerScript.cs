@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviourPunCallbacks
 {
-    private float speed = 2f;
+    private float speed = 5f;
 
     private float jumpForce = 400f;
 

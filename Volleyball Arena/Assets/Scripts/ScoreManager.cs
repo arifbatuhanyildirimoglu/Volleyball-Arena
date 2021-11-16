@@ -16,26 +16,28 @@ public class ScoreManager : Singleton<ScoreManager>
     // Start is called before the first frame update
     void Start()
     {
-
         masterScore = Convert.ToInt32(masterScoreText.text);
         clientScore = Convert.ToInt32(clientScoreText.text);
     }
 
     public void AddScoreToMaster()
     {
-
+        
         masterScore++;
 
-        PhotonNetwork.LoadLevel("GameScene");
+        GameManager.Instance.SpawnCharacters();
+        
         masterScoreText.text = masterScore.ToString();
         
     }
 
     public void AddScoreToClient()
     {
+        
         clientScore++;
         
-        PhotonNetwork.LoadLevel("GameScene");
+        GameManager.Instance.SpawnCharacters();
+        
         clientScoreText.text = clientScore.ToString();
 
     }
